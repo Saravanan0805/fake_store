@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'db_method.dart';
 import 'db_class.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -15,8 +14,6 @@ class ProductPage extends StatefulWidget {
 }
 
 class _ProductPageState extends State<ProductPage> {
-  HttpService httpService = HttpService();
-
   @override
   Widget build(BuildContext context) {
     double height = window.physicalSize.height / window.devicePixelRatio;
