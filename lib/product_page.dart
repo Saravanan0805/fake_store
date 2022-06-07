@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'db_class.dart';
 import 'package:cached_network_image/cached_network_image.dart';
