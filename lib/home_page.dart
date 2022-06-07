@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
-
 import 'db_class.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,7 +32,7 @@ class _HomePageState extends State<HomePage> {
 
       await createHiveData(value);
     } catch (e) {
-      print('no data');
+      snack(text: 'no data');
     }
     var myMap = box!.toMap().values.toList();
 
@@ -105,5 +104,17 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: const Text('Load data from databse')))),
     );
+  }
+
+  snack({required String text}) {
+    final snackBar = SnackBar(
+      content: Text(text),
+      action: SnackBarAction(
+        label: 'ok',
+        onPressed: () {},
+      ),
+    );
+
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 }

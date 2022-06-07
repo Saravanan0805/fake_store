@@ -15,7 +15,7 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
-    double height = window.physicalSize.height / window.devicePixelRatio;
+    //double height = window.physicalSize.height / window.devicePixelRatio;
     double width = window.physicalSize.width / window.devicePixelRatio;
     return Scaffold(
       appBar: AppBar(
