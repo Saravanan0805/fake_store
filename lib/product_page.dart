@@ -65,7 +65,10 @@ class _ProductPageState extends State<ProductPage> {
                                   imageUrl:
                                       "${widget.products[i].productUrl}$i",
                                   placeholder: (context, url) => const Center(
-                                      child: CircularProgressIndicator()),
+                                      child: Image(
+                                    image: AssetImage('assets/Preloader.gif'),
+                                    fit: BoxFit.fill,
+                                  )),
                                   errorWidget: (context, url, error) =>
                                       const Icon(Icons.error),
                                 ),
