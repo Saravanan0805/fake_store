@@ -19,7 +19,7 @@ class _ProductPageState extends State<ProductPage> {
     double width = window.physicalSize.width / window.devicePixelRatio;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Fultter store'),
+        title: const Text('Fake store'),
       ),
       body: Scrollbar(
         child: SafeArea(
