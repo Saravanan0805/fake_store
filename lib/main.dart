@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'home.dart';
+import 'nav.dart';
+
 void main() async {
   await Hive.initFlutter();
   runApp(const MyApp());
@@ -13,14 +16,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ));
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          systemOverlayStyle: SystemUiOverlayStyle.dark,
+          systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const HomeView(),
       debugShowCheckedModeBanner: false,
     );
   }
