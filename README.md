@@ -1,6 +1,6 @@
 # fake_store
 
-A new Flutter project.
+A simple two page fake store app made with random generated json file. Hive database is used to store and access the generated json file from memory and cached network image plugin is used to cache the loaded images from the url's.
 
 ## Getting Started
 
